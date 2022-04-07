@@ -30,9 +30,9 @@ RichTextController _controller;
   @override
   void initState() {
       // initialize with your custom regex patterns or Strings and styles
-      //* Starting V1.2.0 You also have "text" parameter in default constructor !
+      //* Starting V1.2.0 You also have "String" parameter in default constructor and also added the //"fromValue" Constructor!
       _controller = RichTextController(
-          patternMatchMap: {
+          patternMap: {
            //
           //* Returns every Hashtag with red color
           //
@@ -49,7 +49,7 @@ RichTextController _controller;
           },
          //* starting v1.2.0
          // Now you have the option to add string Matching!
-          stringMatchMap: {
+          stringMap: {
           "String1":TextStyle(color: Colors.red),
           "String2":TextStyle(color: Colors.yellow),
          },
@@ -63,7 +63,6 @@ RichTextController _controller;
            //! P.S
            // as long as you're typing, the controller will keep updating the list.
          }
-         deleteOnBack: true,
 
       );
     super.initState();
